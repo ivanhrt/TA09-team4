@@ -32,7 +32,7 @@ public class Electrodomestico {
 		this.setPrecioBase(precioBase);
 		this.setPeso(peso);
 		this.setColor(comprobarColor(color));
-		this.setConsumo(consumo);
+		this.setConsumo(comprobarConsumo(consumo));
 	}
 	
 	public String comprobarColor(String color) {
@@ -45,8 +45,18 @@ public class Electrodomestico {
 		}
 		else
 			return "BLANCO";
-		
-		
+	}
+	
+	private char comprobarConsumo(char consumo) {
+		if (consumo>='A' && consumo<='F') {
+			return consumo;
+		}
+		else if (consumo>='a' && consumo<='f'){
+			System.out.println((char) (consumo-'a'+'A'));
+			return (char) (consumo-'a'+'A');
+		}
+		else
+			return CONSUMOINICIAL;
 		
 	}
 	
