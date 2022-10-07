@@ -52,7 +52,6 @@ public class Electrodomestico {
 			return consumo;
 		}
 		else if (consumo>='a' && consumo<='f'){
-			System.out.println((char) (consumo-'a'+'A'));
 			return (char) (consumo-'a'+'A');
 		}
 		else
@@ -60,8 +59,10 @@ public class Electrodomestico {
 		
 	}
 	
-	public static double precioFinal(double precioBase, char consumo, double peso) {
-		double precio_final = precioBase;
+	public double precioFinal() {
+		
+		
+		double precio_final = getPrecioBase();
 		
 		switch(consumo) {
 			case 'A':
