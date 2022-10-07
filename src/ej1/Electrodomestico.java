@@ -7,10 +7,10 @@ public class Electrodomestico {
 	private static final char CONSUMOINICIAL = 'F';
 	private static final double PESOINICIAL = 5;
 	
-	private double precioBase;
-	private String color;
-	private char consumo;
-	private double peso;
+	protected double precioBase;
+	protected String color;
+	protected char consumo;
+	protected double peso;
 
 	public Electrodomestico() {
 		this.setPrecioBase(PRECIOBASEINICIAL);
