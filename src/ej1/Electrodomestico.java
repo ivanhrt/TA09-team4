@@ -60,6 +60,43 @@ public class Electrodomestico {
 		
 	}
 	
+	public static double precioFinal(double precioBase, char consumo, double peso) {
+		double precio_final = precioBase;
+		
+		switch(consumo) {
+			case 'A':
+				precio_final += 100;
+				break;
+			case 'B':
+				precio_final += 80;
+				break;
+			case 'C':
+				precio_final += 60;
+				break;
+			case 'D':
+				precio_final += 50;
+				break;
+			case 'E':
+				precio_final += 30;
+				break;
+			case 'F':
+				precio_final += 10;
+				break;
+		}
+		
+		if (peso>=0 && peso<=19) {
+			precio_final += 10;
+		}else if(peso>=20 && peso<=49){
+			precio_final += 50;
+		}else if(peso>=50 && peso<=79){
+			precio_final += 80;
+		}else if(peso>=80){
+			precio_final += 100;
+		}
+		
+		return precio_final;
+	}
+	
 	public String toString() {
 		return "Precio - "+this.precioBase+" €"+
 				"\nColor - "+this.color+
