@@ -1,4 +1,4 @@
-package Ex3;
+package ej1;
 
 public class Electrodomestico {
 	
