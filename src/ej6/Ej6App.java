@@ -3,18 +3,14 @@ package ej6;
 public class Ej6App {
 
 	public static void main(String[] args) {
-		Pelicula pelicula = new Pelicula();
-		Espectador espectador = new Espectador();
-		Sala sala = new Sala();
+		Pelicula pelicula = new Pelicula("Indiana Jones", 7.56,153,7,"Spielberg");
+		Espectador espectador = new Espectador("",0,"Juan",23,50.5);
+		Sala sala = new Sala(7,5);
+		llenarSala(pelicula, espectador, sala);
 		
 	}
 
 	public static void llenarSala(Pelicula pelicula, Espectador espectador, Sala sala) {
-		//Contador de asientos ocupados
-		int contador = 0;
-		
-		String[][] salas=sala.generarSala();
-		double n_asientos = sala.contarAsientos();
 		
 		//Impido acceder a un menor de edad saliendo del metodo si no pasa el if
 		if (espectador.getEdad()<pelicula.getEdad_min()) {
@@ -28,20 +24,13 @@ public class Ej6App {
 			return;
 		}
 		
-		//Marcare con O de ocupado, la posicion de la matriz donde asiente una persona, por eso hago un recuento de O si es el mismo que el numero de posiciones, entonces la sala esta llena
-		for (int i=0;i<salas.length;i++) {
-			for (int j=0; j<salas[i].length;j++) {
-				if (salas[i][j].equals("O")) {
-					contador++;
-				}
-			}
-		}
-		
-		if(contador==n_asientos) {
+		if(sala.contarLLeno()) {
 			System.out.println("La sala ya esta llena");
 			return;
 		}
 		
+		System.out.println("Tu asiento para la pelicula "+pelicula.getPelicula()+" es:");
+		sala.ocuparAsiento();
 	}
 	
 }
