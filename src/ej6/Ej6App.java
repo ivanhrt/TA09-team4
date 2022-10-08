@@ -5,8 +5,14 @@ public class Ej6App {
 	public static void main(String[] args) {
 		Pelicula pelicula = new Pelicula("Indiana Jones", 7.56,153,7,"Spielberg");
 		Espectador espectador = new Espectador("",0,"Juan",23,50.5);
-		Sala sala = new Sala(7,5);
+		Sala sala = new Sala(1,1);
+		Espectador espectador_1 = new Espectador("",0,"Juan",6,50.5);
+		Espectador espectador_2 = new Espectador("",0,"Juan",23,6);
+		Espectador espectador_3 = new Espectador("",0,"Juan",23,50.5);
 		llenarSala(pelicula, espectador, sala);
+		llenarSala(pelicula, espectador_1, sala);
+		llenarSala(pelicula, espectador_2, sala);
+		llenarSala(pelicula, espectador_3, sala);
 		
 	}
 
