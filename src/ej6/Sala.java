@@ -6,7 +6,7 @@ public class Sala {
 	
 	private int filas;
 	private int columnas;
-	private String[][] sala;
+	private int[][] sala;
 	
 	public Sala() {
 		this.filas=0;
@@ -17,7 +17,7 @@ public class Sala {
 		this.filas = filas;
 		this.columnas = columnas;
 		//Genero una matriz de numero de filas i numero de columnas que representan los asientos del cine
-		this.sala = new String[this.filas][this.columnas];
+		this.sala = new int[this.filas][this.columnas];
 	}
 
 	public int getFilas() {
@@ -36,7 +36,7 @@ public class Sala {
 		this.columnas = columnas;
 	}
 	
-	public String[][] getSala() {
+	public int[][] getSala() {
 		return sala;
 	}
 	
@@ -50,9 +50,9 @@ public class Sala {
 	public boolean contarLLeno() {
 		//constante donde se le suma uno por cada espacio que tenga el string Ocupado 
 		int contador=0;
-		for (int i=0;i<this.columnas;i++) {
-			for (int j=0; j<this.filas;j++) {
-				if (this.sala[i][j].equals("Ocupado")) {
+		for (int i=0;i<this.filas;i++) {
+			for (int j=0; j<this.columnas;j++) {
+				if (this.sala[i][j]==1) {
 					contador++;
 				}
 			}
@@ -73,11 +73,12 @@ public class Sala {
 			//cojo numero random para la fila y para la columna y miro si tiene el string Ocupado, en caso positivo entonces busca otro lugar
 			n_filas = rad.nextInt(this.filas);
 			n_columna = rad_1.nextInt(this.columnas);
-		}while(this.sala[n_filas][n_columna].equals("Ocupado"));
-		
+		}while(this.sala[n_filas][n_columna]==1);
 		//el lugar assignado pasa a guardar el String Ocupado
-		this.sala[n_filas][n_columna]="Ocupado";
-		System.out.println((this.filas-n_filas)+(char)(n_columna+65));
+		this.sala[n_filas][n_columna]=1;
+		int numero_columna=n_columna+65;
+		char letra_columna = (char)numero_columna;
+		System.out.println(""+(this.filas-n_filas)+letra_columna);
 		
 	}
 }
