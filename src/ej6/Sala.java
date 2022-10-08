@@ -76,9 +76,9 @@ public class Sala {
 		}while(this.sala[n_filas][n_columna]==1);
 		//el lugar assignado pasa a guardar el String Ocupado
 		this.sala[n_filas][n_columna]=1;
-		int numero_columna=n_columna+65;
+		int numero_columna=n_columna+'A';
 		char letra_columna = (char)numero_columna;
-		System.out.println(""+(this.filas-n_filas)+letra_columna);
+		System.out.println(""+((this.filas+1)-n_filas)+letra_columna);
 		
 	}
 }
