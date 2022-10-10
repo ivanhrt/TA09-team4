@@ -1,6 +1,6 @@
 package ej6;
 
-public class Espectador extends Cine{
+public class Espectador {
 	private String nombre;
 	private int edad;
 	private double dinero;
@@ -11,8 +11,7 @@ public class Espectador extends Cine{
 		this.dinero = 0.0;
 	}
 	
-	public Espectador(String pelicula, double precio, String nombre, int edad, double dinero) {
-		super(pelicula, precio);
+	public Espectador(String nombre, int edad, double dinero) {
 		this.nombre=nombre;
 		this.edad=edad;
 		this.dinero=dinero;

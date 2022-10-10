@@ -1,6 +1,6 @@
 package ej6;
 
-public class Cine {
+public abstract class Cine {
 
 	protected String pelicula;
 	protected double precio_entrada;
