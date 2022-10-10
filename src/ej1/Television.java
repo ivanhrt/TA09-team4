@@ -42,7 +42,7 @@ public class Television extends Electrodomestico{
 	 
 	
 	public double precioFinal() {
-		double precio = super.precioFinal();//
+		double precio = super.precioFinal();
 		
 		if(resolucion>40) {
 			precio+=(precioBase*0.3);

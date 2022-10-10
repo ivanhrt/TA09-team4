@@ -40,11 +40,7 @@ public class Sala {
 		return sala;
 	}
 	
-	//contar el numero de huecos que hay en la matriz
-	public double contarAsientos() {
-		double n_asientos = this.columnas*this.filas;
-		return n_asientos;
-	}
+	
 	
 	//Metodo que cuenta cuantos huecos tienen el String Ocupado, si todos los huecos tienen este String, entonces el cine esta lleno
 	public boolean contarLLeno() {
@@ -78,7 +74,7 @@ public class Sala {
 		this.sala[n_filas][n_columna]=1;
 		int numero_columna=n_columna+'A';
 		char letra_columna = (char)numero_columna;
-		System.out.println(""+((this.filas+1)-n_filas)+letra_columna);
+		System.out.println(""+(this.filas-n_filas)+letra_columna);
 		
 	}
 }
