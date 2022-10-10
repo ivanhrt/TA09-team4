@@ -5,6 +5,8 @@ public class Ej6App {
 	public static void main(String[] args) {
 		Pelicula pelicula = new Pelicula("Indiana Jones", 7.56,153,7,"Spielberg");
 		Sala sala = new Sala(2,2);
+		
+		//Pruebas para llenar la sala de espectadores
 		Espectador espectador_1 = new Espectador("Juan",6,50.5);
 		Espectador espectador_2 = new Espectador("Pepe",23,6);
 		Espectador espectador_3 = new Espectador("Eustaquio",18,50.5);
