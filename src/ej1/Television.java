@@ -31,6 +31,11 @@ public class Television extends Electrodomestico{
 	}
 
 	
+	@Override
+	public String toString() {
+		return super.toString()+" Television [resolucion=" + resolucion + ", sintonizadorTDT=" + sintonizadorTDT + "]";
+	}
+
 	public double getResolucion() {
 		return resolucion;
 	}

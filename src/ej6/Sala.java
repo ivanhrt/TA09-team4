@@ -70,7 +70,7 @@ public class Sala {
 			n_filas = rad.nextInt(this.filas);
 			n_columna = rad_1.nextInt(this.columnas);
 		}while(this.sala[n_filas][n_columna]==1);
-		//el lugar assignado pasa a guardar el String Ocupado
+		//el lugar assignado pasa a guardar el asiento Ocupado
 		this.sala[n_filas][n_columna]=1;
 		int numero_columna=n_columna+'A';
 		char letra_columna = (char)numero_columna;

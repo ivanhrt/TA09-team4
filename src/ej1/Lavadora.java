@@ -19,6 +19,12 @@ public class Lavadora extends Electrodomestico{
 		this.setCarga(carga);
 	}
 
+	@Override
+	public String toString() {
+		
+		return super.toString()+" Lavadora [CARGA_DEFECTO=" + CARGA_DEFECTO + ", carga=" + carga + "]";
+	}
+
 	public double getCarga() {
 		return carga;
 	}
